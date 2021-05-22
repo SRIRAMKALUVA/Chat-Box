@@ -1,0 +1,184 @@
+
+.maintitle{
+  font-family: 'Inconsolata', monospace;
+  font-size: 30px;
+  color: Black;
+}
+.maintitle:hover{
+  text-decoration: none;
+  color: red;
+}
+.navbar{
+  padding: 0px;
+  margin-bottom: 0px;
+  // background-color: black;
+}
+
+hr.chatroom{
+  border-top: 1px solid red;
+  padding-top: 0px;
+  margin-top: -4px;
+}
+hr{
+  border-top: 2px solid red;
+  padding-top: 0px;
+  margin-top: -3px;
+}
+.avatar {
+  max-height:30px;
+  border-radius: 15px;
+  width:auto;
+  vertical-align:middle;
+}
+.room-nav-link {
+  border: 2px solid balck;
+  background: lighten(black, 45%);
+  border-radius: 12px;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+
+  & + .room-nav-link {
+    border-top: 0 none;
+  }
+}
+.room-nav-link:hover{
+  color: red;
+  text-decoration: none;
+}
+.intro{
+  font-family: 'Inconsolata', monospace;
+  color: white;
+  .buttonSend{
+    background-color: black;
+    border-radius: 0px 0px 12px 0px;
+    color: white;
+  }
+  .buttonSend:hover{
+    color: red;
+  }
+  .rooms{
+    padding: 10px;
+  }
+  .roomname{
+    color: black;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+  }
+  .create{
+    text-decoration: none;
+    color: black;
+  }
+  .create:hover{
+    color: red;
+  }
+  .maincontent{
+    background-color: lighten(black, 30%);
+    padding: 15px;
+
+    padding-right: 5px;
+    padding-bottom: 2px;
+    border-radius: 12px;
+    .maincontent-heading{
+      text-align: center;
+    }
+  }
+}
+.chat {
+  border: 1px solid lighten(black, 20%);
+  background: lighten($secondary, 30%);
+  height: 50vh;
+  border-radius: 12px 12px 0 0;
+  overflow-y: auto;
+  font-family: 'Inconsolata', monospace;
+}
+
+.chat-input {
+  border-top: 0 none;
+  border-radius: 0 0 12px 12px;
+  font-family: 'Inconsolata', monospace;
+}
+
+.chat-message-container {
+  padding: 5px;
+  // padding-top: 30px;
+
+  .avatar {
+    margin: 5px;
+  }
+
+  .message-content {
+    padding: 5px;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background: lighten(black, 45%);
+    color: $white;
+    font-family: 'Inconsolata', monospace;
+    .createdAt{
+      color: white;
+      float: right;
+      padding-right: 10px;
+    }
+  }
+
+  & + .chat-message-container {
+    margin-top: 10px;
+  }
+}
+
+.gg-log-in {
+box-sizing: border-box;
+position: relative;
+display: block;
+transform: scale(var(--ggs,1));
+width: 6px;
+height: 16px;
+border: 2px solid;
+border-left: 0;
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+margin-right: -10px;
+color: black;
+}
+.gg-log-in:hover{
+  color: blue;
+}
+.gg-log-in::after,
+.gg-log-in::before {
+content: "";
+display: block;
+box-sizing: border-box;
+position: absolute
+}
+
+.gg-log-in::after {
+border-top: 2px solid;
+border-right: 2px solid;
+transform: rotate(45deg);
+width: 8px;
+height: 8px;
+left: -8px;
+bottom: 2px
+}
+
+.gg-log-in::before {
+border-radius: 3px;
+width: 10px;
+height: 2px;
+background: currentColor;
+left: -11px;
+bottom: 5px
+}
+.maincontent{
+  color: white;
+}
+.logout{
+  color: black;
+  padding: 6px 6px 0px 0px;
+}
+.Username{
+color: black;
+font-family: 'Inconsolata', monospace;
+padding: 0px 15px 0px 4px;
+font-size: 16px;
+}
