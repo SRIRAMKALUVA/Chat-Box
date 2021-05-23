@@ -4,9 +4,16 @@
   <% end %>
 </div>
 <hr class="chatroom">
+<div class="mb-3">
+  <%= link_to urls_index_path, class: 'create' do %>
+    URLSHORTNER
+  <% end %>
+</div>
+<hr class="chatroom">
 
 <% if @rooms.present? %>
   <nav class="nav flex-column">
+    <h4 class="groupstitle">ChatGroups</h4>
     <% @rooms.each do |room| %>
       <div class="rooms">
         <%= link_to room.name, room_path(room), class: 'nav-link room-nav-link' %>

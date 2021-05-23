@@ -1,0 +1,15 @@
+<div class="form-upload">
+    <h4 class="groupstitle">Create your Short Url here</h4>
+    <%= flash[:error] %>
+    <%= form_with model: @url do |form| %>
+        <div class="form-group">
+            <%= form.text_field :name,placeholder:"Name of the URL", :style=>'width:100%; font-family: Inconsolata, monospace;'%>
+        </div>
+        <div class="form-group">
+            <%= form.text_field :long_url, placeholder:"Long URL",:style=>'width:100%; font-family: Inconsolata, monospace;' %>
+        </div>
+        <div class="text-center">
+            <%= form.submit  class: 'createbutton' %>
+        </div>
+    <% end %>
+</div>

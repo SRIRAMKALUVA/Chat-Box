@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_085406) do
+ActiveRecord::Schema.define(version: 2021_05_23_063844) do
 
   create_table "room_messages", force: :cascade do |t|
     t.integer "room_id", null: false
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2021_05_22_085406) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_rooms_on_name", unique: true
+  end
+
+  create_table "urls", force: :cascade do |t|
+    t.string "name"
+    t.string "long_url"
+    t.string "short_url"
+    t.integer "click"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

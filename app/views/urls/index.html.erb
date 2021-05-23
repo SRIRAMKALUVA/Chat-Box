@@ -1,0 +1,17 @@
+<table class="table table-bordered">
+    <thead>
+    <tr class="tableheads">
+        <th>Name of the Link</th>
+        <th>Short URL</th>
+    </tr>
+    </thead>
+    <tbody class="tablebody">
+    <% @urls.each do |url| %>
+    <tr>
+    <td><%= url.name %></td>
+    <td><%= link_to url.short_url, url.long_url%></td>
+    </tr>
+    <% end %>
+    </tbody>
+</table>
+<%= link_to 'Create Short link', new_url_path, class: 'createbutton' %>
